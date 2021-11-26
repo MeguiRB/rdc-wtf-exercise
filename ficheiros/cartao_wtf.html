@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cartão WTF</title>
+    <style>
+      body {
+        font-family: Calibri;
+      }
+      h1 {
+        font-family: Calibri;
+        color: #ff3399;
+      }
+      h4 {
+        font-family: Calibri;
+        color: #ff3399;
+      }
+      legend {
+        font-weight: bold;
+      }
+      .send-form {
+        text-align: right;
+        font-size: smaller;
+        position: relative;
+        right: 100px;
+      }
+
+      /*https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp*/
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://www.wtf.pt">
+      <img src="../imagens/logo.jpeg" alt="logo" width="500" height="100"
+    /></a>
+
+    <br />
+    <a href="../index.html">Tarifários</a>
+    <a href="../ficheiros/apps.html">Apps</a>
+    <a href="../ficheiros/cinemas.html">Cinema</a>
+    <hr />
+    <h1>Adesão Cartão WTF</h1>
+    <form style="width: 70%">
+      <fieldset style="width: 750px">
+        <legend>Dados pessoais:</legend>
+        Nome:
+        <input type="text" name="name" maxlength="100" required /><br /><br />
+        Sexo:
+        <input type="radio" name="genero" id="masculino" checked />Masculino
+        <input type="radio" name="genero" id="feminino" />Feminino <br /><br />
+        Data de nascimento:
+        <input type="date" name="data" id="data" required /><br /><br />
+        Estado civil:
+        <select name="estado-civil" id="estado-civil" required>
+          <option value="" disabled selected>Escolha uma opção</option>
+          <option value="casado">Casado</option>
+          <option value="solteiro">Solteiro</option>
+          <option value="divorciado">Divorciado</option>
+          <option value="viúvo">Viúvo</option>
+        </select>
+        Nr de filhos:
+        <input type="number" min="0" max="5" style="width: 17px" required />
+      </fieldset>
+      <br /><br />
+      <fieldset>
+        <legend>Contactos</legend>
+        Código-Postal:
+        <input
+          type="tel"
+          placeholder="0000"
+          minlength="4"
+          maxlength="4"
+          size="2"
+          pattern="\d*"
+          required
+        />-
+        <input
+          type="tel"
+          placeholder="000"
+          minlength="3"
+          maxlength="3"
+          size="1"
+          pattern="\d*"
+          required
+        /><br /><br />
+        Morada: <br />
+        <textarea name="morada" cols="106" rows="5" required></textarea
+        ><br /><br />
+        Email:
+        <input
+          type="email"
+          name="email"
+          placeholder="ex:alguem@gmail.com"
+          required
+        />
+        <br /><br />
+        Password:
+        <input type="password" name="password" required />
+      </fieldset>
+      <div class="send-form">
+        <i>Pretendo ser contactado através de:</i>
+        <input type="checkbox" name="check-email" />Email
+        <input type="checkbox" name="check-tel" />Telemóvel
+        <input type="checkbox" name="check-correio" />Correio <br />
+        <input type="reset" value="Limpar" />
+        <input type="submit" value="Confirmar" />
+      </div>
+    </form>
+    <br />
+  </body>
+</html>
